@@ -4,17 +4,22 @@
     {
         //Constants
         int Full_Time = 1;
+        int Emp_Rate_Per_Hour = 20;
+        //Variables
+        int empHrs = 0;
+        int empWage = 0;
         Random random = new Random();
         //Computation
         int empCheck = random.Next(0, 2);
         if (empCheck == Full_Time)
         {
-            Console.WriteLine("Employee is Present");
+            empHrs = 8;
         }
         else
         {
-            Console.WriteLine("Employee is absent");
+            empHrs = 0;
         }
-    
+        empWage = empHrs * Emp_Rate_Per_Hour;
+        Console.WriteLine("Emp Wage : " + empWage);    
     }
 }
